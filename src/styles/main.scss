@@ -49,6 +49,12 @@ body {
 }
 
 @for $i from 1 through 31 {
+  .calendar :nth-child(#{$i})::after {
+    content: "#{$i}";
+  }
+}
+
+@for $i from 1 through 31 {
   .calendar :nth-child(n + #{$i}):hover {
     cursor: pointer;
     background-color: $hover-color;
